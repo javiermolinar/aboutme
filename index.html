@@ -3,30 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Resume</title>
+  <title>Javier Molina - Resume</title>
   <style>
-    /* General Styles */
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
       color: #333;
     }
+
     .container {
       max-width: 900px;
-      margin: 50px auto;
+      margin: 40px auto;
       background-color: #fff;
       padding: 40px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
-    h1, h2, h3 {
-      margin: 0;
+    .header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+
+    .photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 25px;
+      flex-shrink: 0;
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .header-info {
+      flex: 1;
     }
 
     h1 {
       font-size: 2.5em;
+      margin: 0 0 5px 0;
       color: #2c3e50;
     }
 
@@ -38,52 +61,48 @@
       margin-bottom: 15px;
     }
 
-    .section {
-      margin-bottom: 30px;
-    }
-
-    .info {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-
-    .info div {
-      margin-bottom: 10px;
-    }
-
-    .skills span {
-      display: inline-block;
-      background-color: #e74c3c;
-      color: #fff;
-      padding: 5px 10px;
-      margin: 5px 5px 0 0;
-      border-radius: 5px;
-      font-size: 0.9em;
-    }
-
-    .experience, .education {
-      margin-bottom: 20px;
-    }
-
-    .experience h3, .education h3 {
-      margin-bottom: 5px;
+    h3 {
+      margin: 5px 0;
       color: #e74c3c;
     }
 
-    .experience p, .education p {
-      margin: 0;
-      font-size: 0.95em;
-      color: #555;
+    .header-info div {
+      margin-bottom: 5px;
     }
 
-    .contact a {
+    a {
       color: #e74c3c;
       text-decoration: none;
     }
 
-    .contact a:hover {
+    a:hover {
       text-decoration: underline;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .experience, .education, .skills, .opensource {
+      margin-bottom: 20px;
+    }
+
+    .experience div, .education div, .opensource div {
+      margin-bottom: 15px;
+    }
+
+    .experience p, .education p, .opensource p {
+      margin: 3px 0;
+      font-size: 0.95em;
+      color: #555;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 5px;
     }
 
     @media print {
@@ -93,56 +112,98 @@
       .container {
         box-shadow: none;
         margin: 0;
+        padding: 20px;
       }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <header class="section">
-      <h1>John Doe</h1>
-      <div class="info">
-        <div>Email: <a href="mailto:john@example.com">john@example.com</a></div>
-        <div>Phone: +123 456 7890</div>
-        <div>Website: <a href="https://johndoe.com" target="_blank">johndoe.com</a></div>
-        <div>Location: City, Country</div>
+    <header class="header">
+      <div class="photo">
+        <img src="photo.jpg" alt="Javier Molina">
+      </div>
+      <div class="header-info">
+        <h1>Javier Molina</h1>
+        <div>Granada, Spain</div>
+        <div>Email: <a href="mailto:javimolina@fastmail.com">javimolina@fastmail.com</a></div>
+        <div>LinkedIn: <a href="https://linkedin.com/in/javiermolinar" target="_blank">linkedin.com/in/javiermolinar</a></div>
+        <div>GitHub: <a href="https://github.com/javiermolinar" target="_blank">github.com/javiermolinar</a></div>
       </div>
     </header>
 
-    <section class="section about">
-      <h2>About Me</h2>
-      <p>Passionate web developer with 5+ years of experience building responsive and user-friendly websites. Skilled in HTML, CSS, and modern web design principles.</p>
+    <section class="section experience">
+      <h2>Work Experience</h2>
+
+      <div>
+        <h3>Lead Software Engineer - Onna</h3>
+        <p>Sep 2021 – Present | Remote, Spain</p>
+        <ul>
+          <li>Led implementation of new connectors and optimized existing ones, amplifying data accessibility.</li>
+          <li>Re-architected ingestion system, achieving scalability and faster data throughput for terabytes monthly.</li>
+          <li>Enhanced operational efficiency via structured logging and distributed tracing to detect errors early.</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Principal Software Engineer - Unit4</h3>
+        <p>2019 – 2021 | Granada, Spain</p>
+        <ul>
+          <li>Pioneered multi-tenancy transition for U4ERP, reducing cloud costs by 30%.</li>
+          <li>Engineered resilient error-handling for distributed workloads, critical for e-invoicing integrations.</li>
+          <li>Advocated XP practices and observability standards, reducing production incidents and boosting team commitment.</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Lead Software Engineer - Bestsecret Gmbh</h3>
+        <p>2018 – 2019 | Granada, Spain</p>
+        <ul>
+          <li>Delivered application for managing returned items, accelerating processing by 20%.</li>
+          <li>Developed Kafka-based integration platform for processing 2,000+ returns daily.</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Software Engineer - Unit4</h3>
+        <p>2010 – 2018 | Granada, Spain</p>
+        <ul>
+          <li>Directed scrum team creating central messaging hub using Microsoft Service Bus.</li>
+          <li>Contributed to APIs and tooling for product developers within the platform team.</li>
+        </ul>
+      </div>
     </section>
 
     <section class="section skills">
-      <h2>Skills</h2>
-      <span>HTML</span>
-      <span>CSS</span>
-      <span>Responsive Design</span>
-      <span>Flexbox & Grid</span>
-      <span>UI/UX Design</span>
-      <span>Git & GitHub</span>
+      <h2>Technologies & Languages</h2>
+      <ul>
+        <li><strong>Languages:</strong> C#, Python, JavaScript</li>
+        <li><strong>Technologies:</strong> Azure, GCP, AWS, ElasticSearch, Prometheus, Kubernetes, SQL, Redis</li>
+        <li><strong>Others:</strong> Distributed systems, API design, Event-driven architecture, Extreme programming, TDD</li>
+      </ul>
     </section>
 
-    <section class="section experience">
-      <h2>Experience</h2>
-      <div>
-        <h3>Frontend Developer - ABC Company</h3>
-        <p>Jan 2021 - Present</p>
-        <p>Developed responsive websites using HTML & CSS, improved user experience, and collaborated with designers to implement UI/UX designs.</p>
-      </div>
-      <div>
-        <h3>Web Designer - XYZ Agency</h3>
-        <p>Jun 2018 - Dec 2020</p>
-        <p>Designed and maintained client websites, implemented custom CSS layouts, and ensured cross-browser compatibility.</p>
-      </div>
+    <section class="section opensource">
+      <h2>Open Source Contributions</h2>
+      <ul>
+        <li><strong>Plone:</strong> Improving the Amazon S3 client</li>
+        <li><strong>Pact Foundation:</strong> Enhancing the pact-workshop-js walkthrough</li>
+      </ul>
     </section>
 
     <section class="section education">
-      <h2>Education</h2>
+      <h2>Education & Certifications</h2>
       <div>
-        <h3>Bachelor of Science in Computer Science</h3>
-        <p>University Name, 2014 - 2018</p>
+        <h3>Master's degree in Computer Science</h3>
+        <p>University of Granada, Spain | 2004 – 2010</p>
+      </div>
+      <div>
+        <h3>PSPO I | Scrum.org</h3>
+        <p>2019 – Current</p>
+      </div>
+      <div>
+        <h3>MCPS | Microsoft</h3>
+        <p>2016 – Current</p>
       </div>
     </section>
   </div>
