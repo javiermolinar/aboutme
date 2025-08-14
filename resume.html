@@ -1,211 +1,147 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>This is me!</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f4f4;
-      margin: 0;
-      padding: 0;
-      color: #333;
-    }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Javi Molina - Resume</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <div class="header-info">
+                    <h1>Javier Molina</h1>
+                    <div>Granada, Spain</div>
+                    <div>
+                        GitHub:
+                        <a
+                            href="https://github.com/javiermolinar"
+                            target="_blank"
+                            >github.com/javiermolinar</a
+                        >
+                    </div>
+                </div>
+            </header>
 
-    .container {
-      max-width: 900px;
-      margin: 40px auto;
-      background-color: #fff;
-      padding: 40px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
+            <section class="section experience">
+                <h2>Work Experience</h2>
 
-    .header {
-      display: flex;
-      align-items: center;
-      margin-bottom: 30px;
-      flex-wrap: wrap;
-    }
+                <div>
+                    <h3>Lead Software Engineer - Onna</h3>
+                    <p>Sep 2021 – Present | Remote, Spain</p>
+                    <ul>
+                        <li>
+                            Led implementation of new connectors and optimized
+                            existing ones, amplifying data accessibility.
+                        </li>
+                        <li>
+                            Re-architected ingestion system, achieving
+                            scalability and faster data throughput for terabytes
+                            monthly.
+                        </li>
+                        <li>
+                            Enhanced operational efficiency via structured
+                            logging and distributed tracing to detect errors
+                            early.
+                        </li>
+                    </ul>
+                </div>
 
-    .photo {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      overflow: hidden;
-      margin-right: 25px;
-      flex-shrink: 0;
-    }
+                <div>
+                    <h3>Principal Software Engineer - Unit4</h3>
+                    <p>2019 – 2021 | Granada, Spain</p>
+                    <ul>
+                        <li>
+                            Pioneered multi-tenancy transition for U4ERP,
+                            reducing cloud costs by 30%.
+                        </li>
+                        <li>
+                            Engineered resilient error-handling for distributed
+                            workloads, critical for e-invoicing integrations.
+                        </li>
+                        <li>
+                            Advocated XP practices and observability standards,
+                            reducing production incidents and boosting team
+                            commitment.
+                        </li>
+                    </ul>
+                </div>
 
-    .photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+                <div>
+                    <h3>Lead Software Engineer - Bestsecret Gmbh</h3>
+                    <p>2018 – 2019 | Granada, Spain</p>
+                    <ul>
+                        <li>
+                            Delivered application for managing returned items,
+                            accelerating processing by 20%.
+                        </li>
+                        <li>
+                            Developed Kafka-based integration platform for
+                            processing 2,000+ returns daily.
+                        </li>
+                    </ul>
+                </div>
 
-    .header-info {
-      flex: 1;
-    }
+                <div>
+                    <h3>Software Engineer - Unit4</h3>
+                    <p>2010 – 2018 | Granada, Spain</p>
+                    <ul>
+                        <li>
+                            Directed scrum team creating central messaging hub
+                            using Microsoft Service Bus.
+                        </li>
+                        <li>
+                            Contributed to APIs and tooling for product
+                            developers within the platform team.
+                        </li>
+                    </ul>
+                </div>
+            </section>
 
-    h1 {
-      font-size: 2.5em;
-      margin: 0 0 5px 0;
-      color: #2c3e50;
-    }
+            <section class="section skills">
+                <h2>Technologies & Languages</h2>
+                <ul>
+                    <li><strong>Languages:</strong> C#, Python, JavaScript</li>
+                    <li>
+                        <strong>Technologies:</strong> Azure, GCP, AWS,
+                        ElasticSearch, Prometheus, Kubernetes, SQL, Redis
+                    </li>
+                    <li>
+                        <strong>Others:</strong> Distributed systems, API
+                        design, Event-driven architecture, Extreme programming,
+                        TDD
+                    </li>
+                </ul>
+            </section>
 
-    h2 {
-      font-size: 1.5em;
-      color: #34495e;
-      border-bottom: 2px solid #e74c3c;
-      padding-bottom: 5px;
-      margin-bottom: 15px;
-    }
+            <section class="section opensource">
+                <h2>Open Source Contributions</h2>
+                <ul>
+                    <li>
+                        <strong>Plone:</strong> Improving the Amazon S3 client
+                    </li>
+                    <li>
+                        <strong>Pact Foundation:</strong> Enhancing the
+                        pact-workshop-js walkthrough
+                    </li>
+                </ul>
+            </section>
 
-    h3 {
-      margin: 5px 0;
-      color: #e74c3c;
-    }
-
-    .header-info div {
-      margin-bottom: 5px;
-    }
-
-    a {
-      color: #e74c3c;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .section {
-      margin-bottom: 30px;
-    }
-
-    .experience, .education, .skills, .opensource {
-      margin-bottom: 20px;
-    }
-
-    .experience div, .education div, .opensource div {
-      margin-bottom: 15px;
-    }
-
-    .experience p, .education p, .opensource p {
-      margin: 3px 0;
-      font-size: 0.95em;
-      color: #555;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    ul li {
-      margin-bottom: 5px;
-    }
-
-    @media print {
-      body {
-        background-color: #fff;
-      }
-      .container {
-        box-shadow: none;
-        margin: 0;
-        padding: 20px;
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <header class="header">
-      <div class="photo">
-        <img src="photo.png" alt="Javi">
-      </div>
-      <div class="header-info">
-        <h1>Javier Molina</h1>
-        <div>Granada, Spain</div>
-        <div>Email: <a href="mailto:javimolina@fastmail.com">javimolina@fastmail.com</a></div>
-        <div>LinkedIn: <a href="https://linkedin.com/in/javiermolinar" target="_blank">linkedin.com/in/javiermolinar</a></div>
-        <div>GitHub: <a href="https://github.com/javiermolinar" target="_blank">github.com/javiermolinar</a></div>
-      </div>
-    </header>
-
-    <section class="section experience">
-      <h2>Work Experience</h2>
-
-      <div>
-        <h3>Lead Software Engineer - Onna</h3>
-        <p>Sep 2021 – Present | Remote, Spain</p>
-        <ul>
-          <li>Led implementation of new connectors and optimized existing ones, amplifying data accessibility.</li>
-          <li>Re-architected ingestion system, achieving scalability and faster data throughput for terabytes monthly.</li>
-          <li>Enhanced operational efficiency via structured logging and distributed tracing to detect errors early.</li>
-        </ul>
-      </div>
-
-      <div>
-        <h3>Principal Software Engineer - Unit4</h3>
-        <p>2019 – 2021 | Granada, Spain</p>
-        <ul>
-          <li>Pioneered multi-tenancy transition for U4ERP, reducing cloud costs by 30%.</li>
-          <li>Engineered resilient error-handling for distributed workloads, critical for e-invoicing integrations.</li>
-          <li>Advocated XP practices and observability standards, reducing production incidents and boosting team commitment.</li>
-        </ul>
-      </div>
-
-      <div>
-        <h3>Lead Software Engineer - Bestsecret Gmbh</h3>
-        <p>2018 – 2019 | Granada, Spain</p>
-        <ul>
-          <li>Delivered application for managing returned items, accelerating processing by 20%.</li>
-          <li>Developed Kafka-based integration platform for processing 2,000+ returns daily.</li>
-        </ul>
-      </div>
-
-      <div>
-        <h3>Software Engineer - Unit4</h3>
-        <p>2010 – 2018 | Granada, Spain</p>
-        <ul>
-          <li>Directed scrum team creating central messaging hub using Microsoft Service Bus.</li>
-          <li>Contributed to APIs and tooling for product developers within the platform team.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section skills">
-      <h2>Technologies & Languages</h2>
-      <ul>
-        <li><strong>Languages:</strong> C#, Python, JavaScript</li>
-        <li><strong>Technologies:</strong> Azure, GCP, AWS, ElasticSearch, Prometheus, Kubernetes, SQL, Redis</li>
-        <li><strong>Others:</strong> Distributed systems, API design, Event-driven architecture, Extreme programming, TDD</li>
-      </ul>
-    </section>
-
-    <section class="section opensource">
-      <h2>Open Source Contributions</h2>
-      <ul>
-        <li><strong>Plone:</strong> Improving the Amazon S3 client</li>
-        <li><strong>Pact Foundation:</strong> Enhancing the pact-workshop-js walkthrough</li>
-      </ul>
-    </section>
-
-    <section class="section education">
-      <h2>Education & Certifications</h2>
-      <div>
-        <h3>Master's degree in Computer Science</h3>
-        <p>University of Granada, Spain | 2004 – 2010</p>
-      </div>
-      <div>
-        <h3>PSPO I | Scrum.org</h3>
-        <p>2019 – Current</p>
-      </div>
-      <div>
-        <h3>MCPS | Microsoft</h3>
-        <p>2016 – Current</p>
-      </div>
-    </section>
-  </div>
-</body>
+            <section class="section education">
+                <h2>Education & Certifications</h2>
+                <div>
+                    <h3>Master's degree in Computer Science</h3>
+                    <p>University of Granada, Spain | 2004 – 2010</p>
+                </div>
+                <div>
+                    <h3>PSPO I | Scrum.org</h3>
+                    <p>2019 – Current</p>
+                </div>
+                <div>
+                    <h3>MCPS | Microsoft</h3>
+                    <p>2016 – Current</p>
+                </div>
+            </section>
+        </div>
+    </body>
 </html>
